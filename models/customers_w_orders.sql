@@ -2,22 +2,13 @@
 
 with customers as (
 
-    select
-        id as customer_id,
-        first_name,
-        last_name  
-    from ALINAZENG.AE_SANDBOX_RAW.CUSTOMERS
+select * from {{ ref('stg_ae_sandbox_raw__customers') }}
+
 ),
 
 orders as (
 
-    select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-
-    from ALINAZENG.AE_SANDBOX_RAW.orders
+select * from {{ ref('stg_ae_sandbox_raw__orders') }}
 
 ),
 
