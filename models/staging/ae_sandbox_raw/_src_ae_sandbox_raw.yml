@@ -1,0 +1,7 @@
+sources:
+  - name: ae_sandbox_raw
+    database: alinazeng
+    schema: ae_sandbox_raw
+    tables:
+      - name: customers
+      - name: orders
